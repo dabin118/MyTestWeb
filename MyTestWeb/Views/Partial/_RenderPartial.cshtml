@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "_RenderPartial";
+}
+
+<h2>RenderPartial</h2>
+<h3>
+    1.这个方法会直接将结果写入到当前请求的http response数据流中，这意味着它使用了和当前webpage/template使用的相同的TextWriter对象
+    2.方法没有返回值
+    3.不需要创建action，使用简单
+    当要显示的数据已经在引用的ViewModel 中或者 显示的数据不变的时候，使用
+</h3>
+
+<h2>@ViewBag.RenderPartialMessage</h2>
+
+

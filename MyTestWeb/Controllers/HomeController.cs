@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyTestWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,12 @@ namespace MyTestWeb.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+
+            HomeIndexModel model = new HomeIndexModel();
+            model.Name = "后台复制ModelName";
+            model.Title = "后台赋值ModelTitle";
+            return View(model);
+
 
             //指定不同的视图方法：
             //同一目录下的VIew:
@@ -21,6 +27,12 @@ namespace MyTestWeb.Controllers
             //不同目录下的View
             //return View("~/完整路径.cshtml");
         }
+
+
+        
+
+        
+
 
         public ActionResult About()
         {
